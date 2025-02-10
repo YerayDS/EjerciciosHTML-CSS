@@ -1,0 +1,67 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../Imagenes/smiteFondo.jpg) no-repeat center center/cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columnas */
+    gap: 15px;
+    max-width: 1200px;
+    padding: 20px; /* Asegura un poco de espacio interno */
+    margin: 0 auto; /* Centra la sección */
+}
+
+.gallery__container-img:hover {
+    transform: scale(1.05); 
+}
+
+.gallery__img {
+    width: 100%;
+    height: auto; 
+    border-radius: 20px; 
+    object-fit: cover; 
+}
+
+/* QUERIES PARA TABLET */
+
+@media screen and (max-width: 850px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); 
+        max-width: 70%; 
+        margin: 0 auto; 
+    }
+}
+
+/* QUERIES PARA MOVIL */
+
+@media screen and (max-width: 550px) {
+
+    body {
+        background: url(../Imagenes/fondoMovil.jpg) no-repeat center center/cover;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); 
+        max-width: 50%; 
+        margin: 0 auto;
+    }
+
+}

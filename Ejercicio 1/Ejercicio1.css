@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../Imagenes/smiteFondo.jpg) no-repeat center center/cover;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); 
+    z-index: -1; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(25% - 20px); 
+    box-sizing: border-box; 
+}
+
+.card__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px; 
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+.card__img {
+    max-width: 100%; 
+    width: 150px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit:cover; 
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* QUERIES PARA TABLET */
+
+@media screen and (max-width: 850px) {
+    .card {
+        flex-basis: calc(45% - 20px); 
+    }
+}
+
+
+/* QUERIES PARA MOVIL */
+
+@media screen and (max-width: 550px) {
+    body {
+        background: url(../Imagenes/fondoMovil.jpg) no-repeat center center/cover;
+    }
+    .card {
+        flex-basis: calc(55% - 20px); 
+    }
+
+}

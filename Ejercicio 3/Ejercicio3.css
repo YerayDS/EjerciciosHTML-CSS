@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../Imagenes/smiteFondo.jpg) no-repeat center center/cover;
+    min-height: 100vh; 
+}
+
+.nav {
+    background-color: #333; 
+    padding: 15px 0;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center; 
+    list-style: none;
+    gap: 30px; 
+}
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease;
+}
+
+.nav__link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* QUERIES PARA MOVIL */
+
+@media (max-width: 550px) {
+    .nav {
+        padding: 20px 0; 
+    }
+
+    .nav__list {
+        flex-direction: row; 
+        justify-content: center; 
+        gap: 40px; 
+    }
+
+    .nav__link {
+        font-size: 20px; 
+        padding: 8px 15px;
+    }
+}
